@@ -8,7 +8,7 @@ package hospitalsystem;
  *
  * @author tonio
  */
-public class HospitalSystem {
+public class HospitalSystemView {
 
     /**
      * @param args the command line arguments
