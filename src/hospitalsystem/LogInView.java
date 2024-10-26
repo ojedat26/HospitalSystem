@@ -40,7 +40,6 @@ public class LogInView extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
         jPanel5.setBackground(new java.awt.Color(105, 94, 147));
         jPanel5.setLayout(null);
@@ -51,16 +50,14 @@ public class LogInView extends javax.swing.JFrame {
         jPanel5.add(jLabel2);
         jLabel2.setBounds(130, 10, 140, 60);
 
-        getContentPane().add(jPanel5);
-        jPanel5.setBounds(0, 0, 400, 80);
-
         jPanel2.setBackground(new java.awt.Color(190, 175, 194));
         jPanel2.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(239, 220, 249));
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel3.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Staff ID:");
         jPanel3.add(jLabel4);
@@ -68,7 +65,7 @@ public class LogInView extends javax.swing.JFrame {
 
         staffId.setBackground(new java.awt.Color(239, 220, 249));
         staffId.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
-        staffId.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        staffId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         staffId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 staffIdActionPerformed(evt);
@@ -81,6 +78,7 @@ public class LogInView extends javax.swing.JFrame {
         jPanel3.setBounds(60, 10, 280, 50);
 
         jPanel4.setBackground(new java.awt.Color(239, 220, 249));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel4.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
@@ -91,21 +89,34 @@ public class LogInView extends javax.swing.JFrame {
 
         password.setBackground(new java.awt.Color(239, 220, 249));
         password.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
-        password.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(password);
         password.setBounds(90, 10, 178, 30);
 
         jPanel2.add(jPanel4);
         jPanel4.setBounds(60, 70, 280, 50);
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 80, 400, 220);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void staffIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffIdActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_staffIdActionPerformed
 
     /**
