@@ -21,8 +21,8 @@ public class HospitalSystemController {
         v.startup();
     }
     public void validateStaff(int staffId, String password){
-        boolean validation = m.checkStaff();
+        boolean validation = m.checkStaff(staffId,password);
     }
 }
 
-}
+
