@@ -10,7 +10,8 @@ package hospitalsystem;
  */
 
 public class HospitalSystemController {
-        private HospitalSystemModel m;
+    private HospitalSystemModel m;
+    private HospitalSystemPatientView pv; //This class will be for our Patient Window Display
     private LogInView v;
     public HospitalSystemController(HospitalSystemModel m, LogInView v){
         this.m = m;
@@ -22,6 +23,9 @@ public class HospitalSystemController {
     }
     public void validateStaff(int staffId, String password){
         boolean validation = m.checkStaff(staffId,password);
+        if(validation){
+            pv.patientDisplay(); //This function should display our patient display window
+        }
     }
 }
 
