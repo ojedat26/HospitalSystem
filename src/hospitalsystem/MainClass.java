@@ -13,7 +13,8 @@ public class MainClass {
     public static void main(String[] args){
         HospitalSystemModel m = new HospitalSystemModel();
         HospitalSystemLogInView v = new HospitalSystemLogInView();
-        HospitalSystemController c = new HospitalSystemController(m,v);
+        HospitalSystemPatientView pv = new HospitalSystemPatientView();
+        HospitalSystemController c = new HospitalSystemController(m,v,pv);
         c.start();
         
                 

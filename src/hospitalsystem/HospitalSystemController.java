@@ -13,9 +13,10 @@ public class HospitalSystemController {
     private HospitalSystemModel m;
     private HospitalSystemPatientView pv; //This class will be for our Patient Window Display
     private HospitalSystemLogInView v;
-    public HospitalSystemController(HospitalSystemModel m, HospitalSystemLogInView v){
+    public HospitalSystemController(HospitalSystemModel m, HospitalSystemLogInView v, HospitalSystemPatientView pv){
         this.m = m;
         this.v = v;
+        this.pv = pv;
         
     }
     public void start(){
@@ -25,6 +26,7 @@ public class HospitalSystemController {
         boolean validation = m.checkStaff(staffId,password);
         if(validation){
             pv.patientDisplay(); //This function should display our patient display window
+            v.closeup();
         }
     }
 }

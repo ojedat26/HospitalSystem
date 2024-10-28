@@ -9,7 +9,7 @@ package hospitalsystem;
  * @author tonio
  */
 public class HospitalSystemLogInView extends javax.swing.JFrame {
-
+    static HospitalSystemController c = new HospitalSystemController(new HospitalSystemModel(),new HospitalSystemLogInView(),new HospitalSystemPatientView());
     /**
      * Creates new form HospitalSystemJFrame
      */
@@ -36,6 +36,8 @@ public class HospitalSystemLogInView extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         password = new javax.swing.JTextField();
+        SignUpButton = new javax.swing.JButton();
+        LogInButton = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -96,6 +98,23 @@ public class HospitalSystemLogInView extends javax.swing.JFrame {
         jPanel2.add(jPanel4);
         jPanel4.setBounds(60, 70, 280, 50);
 
+        SignUpButton.setBackground(new java.awt.Color(105, 94, 147));
+        SignUpButton.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        SignUpButton.setText("Sign Up");
+        jPanel2.add(SignUpButton);
+        SignUpButton.setBounds(230, 130, 110, 40);
+
+        LogInButton.setBackground(new java.awt.Color(105, 94, 147));
+        LogInButton.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        LogInButton.setText("Log In");
+        LogInButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogInButtonActionPerformed(evt);
+            }
+        });
+        jPanel2.add(LogInButton);
+        LogInButton.setBounds(60, 130, 110, 40);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -119,9 +138,15 @@ public class HospitalSystemLogInView extends javax.swing.JFrame {
         
     }//GEN-LAST:event_staffIdActionPerformed
 
+    private void LogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInButtonActionPerformed
+        // TODO add your handling code here:
+        c.validateStaff(Integer.parseInt(staffId.getText()),password.getText());
+    }//GEN-LAST:event_LogInButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    static HospitalSystemLogInView v = new HospitalSystemLogInView();
     public void startup(){
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -152,12 +177,18 @@ public class HospitalSystemLogInView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HospitalSystemLogInView().setVisible(true);
+                v.setVisible(true);
             }
         });
+        
+    }
+    public void closeup(){
+        v.setVisible(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton LogInButton;
+    private javax.swing.JButton SignUpButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
