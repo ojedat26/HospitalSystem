@@ -12,8 +12,8 @@ package hospitalsystem;
 public class HospitalSystemController {
     private HospitalSystemModel m;
     private HospitalSystemPatientView pv; //This class will be for our Patient Window Display
-    private LogInView v;
-    public HospitalSystemController(HospitalSystemModel m, LogInView v){
+    private HospitalSystemLogInView v;
+    public HospitalSystemController(HospitalSystemModel m, HospitalSystemLogInView v){
         this.m = m;
         this.v = v;
         
