@@ -8,6 +8,21 @@ package hospitalsystem;
  *
  * @author edowa
  */
+
 public class HospitalSystemController {
-    
+        private HospitalSystemModel m;
+    private LogInView v;
+    public HospitalSystemController(HospitalSystemModel m, LogInView v){
+        this.m = m;
+        this.v = v;
+        
+    }
+    public void start(){
+        v.startup();
+    }
+    public void validateStaff(int staffId, String password){
+        boolean validation = m.checkStaff();
+    }
+}
+
 }
