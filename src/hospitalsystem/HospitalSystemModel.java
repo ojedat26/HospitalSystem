@@ -22,9 +22,27 @@ public class HospitalSystemModel {
         StaffList.add(new Staff(4550,"hello"));
         StaffList.add(new Staff(6120,"helloWorld"));
         StaffList.add(new Staff(7630,"passWrd"));
+    }
         
-        
+        public void addPatient(String name, String phoneNumber, String address, String Health){
+            this.PatientList.add(new Patient(name, phoneNumber, address, Health));
+            
+        }
+        public boolean checkStaff(int staffId, String password){
+            for(Staff s:StaffList){
+                if (s.getStaffId() == staffId){
+                    if(s.getPassword().equals(password)){
+                       return true;
+                    }
+                    else{
+                        return false;
+                    }
+                        
+                }
    
         
     }
+            return false;
+        }
+           
 }
